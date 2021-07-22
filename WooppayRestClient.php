@@ -179,12 +179,16 @@ class WooppayRestClient
 	private static function getErrorMessage($errorCode, $defaultMessage)
 	{
 		$messageList = [
-			self::ERROR_BEELINE_UZ_PAYMENT_FAILED => 'Oshibka oplaty. Pojaluysta, poprobuyte pozje.',
-			self::ERROR_BEELINE_UZ_INSUFFICIENT_FUNDS => "Platej ne byl sovershen. Nedostatochno sredstv. Na Vashem schetu doljno ostat'sya ne menee 2000 sum.",
-			self::ERROR_BEELINE_UZ_UNKNOWN_MSISDN => "Ukazanniy nomer ne prinadlejit operatoru.",
-			self::ERROR_BEELINE_UZ_INVALID_STATE => "Ukazanniy nomer zablokirovan. Oplata dlya dannogo nomera nedostupna",
-			self::ERROR_BEELINE_UZ_HAS_EXTRA_BALANCE => "Oplata nedostupna pri podklyuchennoy usluge Doveritel'nyy platej. Pojaluysta, povtorite popytku pozje.",
-			self::ERROR_BEELINE_UZ_TARIFF_PLAN_MISMATCH => "Platej ne byl sovershen. Oplata nedostupna dlya Vashego tarifnogo plana.",
+			self::ERROR_BEELINE_UZ_PAYMENT_FAILED => "Oshibka oplaty. Pojaluysta, poprobuyte pozje. To'lovda xatolik. Iltimos, keyinroq qayta urinib ko'ring.",
+			self::ERROR_BEELINE_UZ_INSUFFICIENT_FUNDS => "Platej ne byl sovershen. Nedostatochno sredstv. Na Vashem schetu doljno ostat'sya ne menee 2000 sum. To'lov amalga oshirilmadi.
+Yetarli mablag' mavjud emas. Hisobingizda kamida 2000 so'm qolishi kerak.",
+			self::ERROR_BEELINE_UZ_UNKNOWN_MSISDN => "Ukazanniy nomer ne prinadlejit operatoru. Ko'rsatilgan raqam operatorga tegishli emas.",
+			self::ERROR_BEELINE_UZ_INVALID_STATE => "Ukazanniy nomer zablokirovan. Oplata dlya dannogo nomera nedostupna. Ko'rsatilgan raqam bloklangan. Ushbu raqam uchun to'lovni amalga oshirib bo'lmaydi.",
+			self::ERROR_BEELINE_UZ_HAS_EXTRA_BALANCE => "Oplata nedostupna pri podklyuchennoy usluge Doveritel'nyy platej. Pojaluysta, povtorite popytku pozje. To'lov amalga oshirilmadi.
+Ishonchli to'lov xizmati yoqilgan paytda to'lovni amalga oshirib bo'lmaydi.
+Iltimos, keyinroq qayta urinib ko'ring.",
+			self::ERROR_BEELINE_UZ_TARIFF_PLAN_MISMATCH => "Platej ne byl sovershen. Oplata nedostupna dlya Vashego tarifnogo plana. To'lov amalga oshirilmadi.
+To'lov sizning tarif rejangiz uchun amal qilmaydi.",
 		];
 
 		return isset($messageList[$errorCode]) ? $messageList[$errorCode] : $defaultMessage;
