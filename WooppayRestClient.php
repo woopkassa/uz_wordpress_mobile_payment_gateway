@@ -180,8 +180,8 @@ class WooppayRestClient
 	{
 		$messageList = [
 			self::ERROR_BEELINE_UZ_PAYMENT_FAILED => "Oshibka oplaty. Pojaluysta, poprobuyte pozje. To'lovda xatolik. Iltimos, keyinroq qayta urinib ko'ring.",
-			self::ERROR_BEELINE_UZ_INSUFFICIENT_FUNDS => "Platej ne byl sovershen. Nedostatochno sredstv. Na Vashem schetu doljno ostat'sya ne menee 2000 sum. To'lov amalga oshirilmadi.
-Yetarli mablag' mavjud emas. Hisobingizda kamida 2000 so'm qolishi kerak.",
+			self::ERROR_BEELINE_UZ_INSUFFICIENT_FUNDS => "Platej ne byl sovershen. Nedostatochno sredstv. Na Vashem schetu posle provedeniya plateja doljno ostavat'sya ne menee 2000 sum.
+				To'lov amalga oshirilmadi. Yetarli mablag' mavjud emas. To'lov amalga oshirilgandan so'ng hisobingizda kamida 2000 so'm qolishi kerak.",
 			self::ERROR_BEELINE_UZ_UNKNOWN_MSISDN => "Ukazanniy nomer ne prinadlejit operatoru. Ko'rsatilgan raqam operatorga tegishli emas.",
 			self::ERROR_BEELINE_UZ_INVALID_STATE => "Ukazanniy nomer zablokirovan. Oplata dlya dannogo nomera nedostupna. Ko'rsatilgan raqam bloklangan. Ushbu raqam uchun to'lovni amalga oshirib bo'lmaydi.",
 			self::ERROR_BEELINE_UZ_HAS_EXTRA_BALANCE => "Oplata nedostupna pri podklyuchennoy usluge Doveritel'nyy platej. Pojaluysta, povtorite popytku pozje. To'lov amalga oshirilmadi.
