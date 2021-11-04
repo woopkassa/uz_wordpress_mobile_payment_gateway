@@ -60,8 +60,11 @@ class WC_Gateway_Wooppay_Mobile extends WC_Payment_Gateway
 					include_once('WooppayRestClient.php');
 					$client = new WooppayRestClient($this->get_option('api_url'), array('trace' => 1));
 					if ($client->login($this->get_option('api_username'), $this->get_option('api_password'))) {
-						$order->update_status('processing', __('Payment processing.', 'woocommerce'));
+						$operationData = $client->getOperationData($_POST['operationId']);
+					if ($operationData[0]->status == 14 || $operationData[0]->status == 19) {
+						$order->update_status('completed', __('Payment completed.', 'woocommerce'));
 						die('{"data":1}');
+					}
 					}
 				} catch (Exception $e) {
 					$this->add_log($e->getMessage());
