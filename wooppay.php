@@ -103,7 +103,7 @@ function add_bootstrap_modal()
             <div class="modal-content">
                 <div class="modal-body">
                     <img class="modal__preloader"
-                         src="<?php echo plugins_url() . '/wooppay-2.0 mobile/assets/images/preloader.gif' ?>"
+                         src="<?php echo plugins_url() . '/uz_wordpress_mobile_payment_gateway/assets/images/preloader.gif' ?>"
                          alt="Preloader" width="146" height="146">
                 </div>
             </div>
